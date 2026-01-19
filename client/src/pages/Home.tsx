@@ -66,7 +66,7 @@ const ListItem = ({ item }: { item: any }) => (
     viewport={{ once: true }}
     whileHover={{ x: 5 }}
     transition={{ type: "spring", stiffness: 300 }}
-    className="group flex items-center justify-between p-4 mb-2 hover:bg-muted/50 rounded-lg cursor-pointer transition-colors"
+    className="group flex items-center justify-between p-4 mb-2 hover:bg-muted/50 dark:hover:bg-muted/30 rounded-lg cursor-pointer transition-colors border border-transparent hover:border-border"
   >
     <div className="flex items-center gap-4">
       <div className={`w-10 h-10 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-sm ${item.color || 'bg-gray-800'}`}>

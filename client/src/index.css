@@ -45,20 +45,20 @@
 }
 
 .dark {
-  --background: 240 10% 3.9%; /* Dark Gray */
-  --foreground: 0 0% 98%; /* White */
+  --background: 240 10% 3.9%; /* Very Dark Gray/Black */
+  --foreground: 0 0% 98%; /* Near White */
 
   --primary: 0 0% 98%;
   --primary-foreground: 240 5.9% 10%;
 
-  --muted: 240 3.7% 15.9%;
+  --muted: 240 3.7% 10%; /* Darker muted */
   --muted-foreground: 240 5% 64.9%;
 
   --accent: 240 3.7% 15.9%;
   --accent-foreground: 0 0% 98%;
 
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
+  --border: 240 3.7% 12%; /* Subtle dark border */
+  --input: 240 3.7% 12%;
 }
 
 @layer base {
