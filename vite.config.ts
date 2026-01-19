@@ -50,5 +50,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-  base: "/Personal-Website/",
 });
