@@ -6,7 +6,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { metaImagesPlugin } from "./vite-plugin-meta-images";
 
 export default defineConfig({
-  base: 'jerryliuchu.github.io/repo-name/',
+  base: '/Personal-Website/',
   
   plugins: [
     react(),
