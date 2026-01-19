@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
-import cityscapeImg from "@assets/generated_images/minimalist_night_cityscape_under_starry_sky.png";
+import cityscapeImg from "@assets/image_1768861733754.png";
 
 // Resume Data
 const WORK_EXPERIENCE = [
@@ -90,13 +90,13 @@ export default function Home() {
     <div className="min-h-screen bg-background relative selection:bg-primary/20">
       
       {/* Background Cityscape */}
-      <div className="fixed bottom-0 left-0 right-0 h-64 md:h-96 z-0 opacity-40 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <img 
           src={cityscapeImg} 
           alt="Cityscape" 
-          className="w-full h-full object-cover object-bottom"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background" />
       </div>
 
       <div className="max-w-5xl mx-auto px-6 py-12 relative z-10">
@@ -145,9 +145,9 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Grid Layout for Content */}
-        <div className="grid md:grid-cols-2 gap-12 md:gap-24">
-          {/* Left Column: Work Experience */}
+        {/* Stacked Layout for Content */}
+        <div className="flex flex-col gap-24">
+          {/* Work Experience */}
           <section id="work">
             <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Work Experience</h2>
             <div className="flex flex-col">
@@ -155,22 +155,23 @@ export default function Home() {
                 <ListItem key={index} item={item} />
               ))}
             </div>
-            
-            <div className="mt-16">
-              <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Activities</h2>
-              <div className="flex flex-col">
-                {ACTIVITIES.map((item, index) => (
-                  <ListItem key={index} item={item} />
-                ))}
-              </div>
-            </div>
           </section>
 
-          {/* Right Column: Projects */}
+          {/* Projects */}
           <section id="projects">
             <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Projects</h2>
             <div className="flex flex-col">
               {PROJECTS.map((item, index) => (
+                <ListItem key={index} item={item} />
+              ))}
+            </div>
+          </section>
+
+          {/* Activities */}
+          <section id="activities">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Activities</h2>
+            <div className="flex flex-col">
+              {ACTIVITIES.map((item, index) => (
                 <ListItem key={index} item={item} />
               ))}
             </div>
