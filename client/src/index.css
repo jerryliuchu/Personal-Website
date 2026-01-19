@@ -79,11 +79,11 @@
   }
 }
 
-/* Custom Cursor Styles */
+/* Custom Cursor Styles - Reverted to default */
 body {
-  cursor: none;
+  cursor: auto;
 }
 
 a, button, input, [role="button"] {
-  cursor: none; /* We will use custom cursor */
+  cursor: pointer;
 }

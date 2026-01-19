@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import StarCursor from "@/components/StarCursor";
 import cityscapeImg from "@assets/generated_images/minimalist_monochromatic_vector_cityscape_outline.png";
 
 // Resume Data
@@ -90,7 +89,6 @@ const ListItem = ({ item }: { item: any }) => (
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative selection:bg-primary/20">
-      <StarCursor />
       
       {/* Background Cityscape */}
       <div className="fixed bottom-0 left-0 right-0 h-64 md:h-96 z-0 opacity-20 dark:opacity-10 pointer-events-none">
