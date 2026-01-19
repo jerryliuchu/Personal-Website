@@ -106,6 +106,7 @@ export default function Home() {
           <nav className="flex items-center gap-6">
             <a href="#work" className="text-sm font-medium hover:text-primary/70 transition-colors">Work</a>
             <a href="#projects" className="text-sm font-medium hover:text-primary/70 transition-colors">Projects</a>
+            <a href="#activities" className="text-sm font-medium hover:text-primary/70 transition-colors">Activities</a>
           </nav>
         </header>
 
