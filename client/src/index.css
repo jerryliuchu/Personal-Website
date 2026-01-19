@@ -61,6 +61,10 @@
   --input: 240 3.7% 12%;
 }
 
+:root {
+  @extend .dark;
+}
+
 @layer base {
   * {
     @apply border-border;
