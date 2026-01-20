@@ -3,22 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Jerry Chu - Software Engineer</title>
 
     <meta property="og:title" content="Jerry Chu - Software Engineer" />
     <meta property="og:description" content="Personal portfolio of Jerry Chu, Software Engineer from Berkeley." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://replit.com/public/images/opengraph.png" />
+    <meta property="og:url" content="https://jerryliuchu.github.io/Personal-Website/" />
+    <meta property="og:image" content="https://jerryliuchu.github.io/Personal-Website/opengraph.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@replit" />
     <meta name="twitter:title" content="Jerry Chu - Software Engineer" />
     <meta name="twitter:description" content="Personal portfolio of Jerry Chu, Software Engineer from Berkeley." />
-    <meta name="twitter:image" content="https://replit.com/public/images/opengraph.png" />
+    <meta name="twitter:image" content="https://jerryliuchu.github.io/Personal-Website/opengraph.jpg" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Importing Inter for main text and Space Mono for code/technical feel -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Handle redirects from 404 page for SPA routing -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
