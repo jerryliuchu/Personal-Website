@@ -1,5 +1,6 @@
 {
   "name": "rest-express",
+  "homepage": "https://jerryliuchu.github.io/Personal-Website/",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -10,6 +11,7 @@
     "start": "NODE_ENV=production node dist/index.cjs",
     "check": "tsc",
     "db:push": "drizzle-kit push"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
