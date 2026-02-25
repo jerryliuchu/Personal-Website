@@ -117,7 +117,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
           >
-            Software Engineer based in Berkeley.
+            Software Engineer and Data Scientist at UC Berkeley.
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,6 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-32 pt-8 border-t border-border flex justify-between text-sm text-muted-foreground">
           <p>© 2026 Jerry Chu</p>
-          <p>Designed with Replit</p>
         </footer>
       </div>
     </div>
