@@ -41,7 +41,7 @@ const WORK_EXPERIENCE = [
   {
     company: "Sports Analytics Group @ Berkeley",
     url: "https://sportsanalytics.studentorg.berkeley.edu/projects.html",
-    logoImage: "https://www.google.com/s2/favicons?domain=sportsanalytics.studentorg.berkeley.edu&sz=128",
+    logoImage: `${import.meta.env.BASE_URL}logos/sagb-logo.png`,
     role: "Data Scientist",
     date: "Aug 2025 - Dec 2025",
     location: "Berkeley, CA",
@@ -57,7 +57,7 @@ const WORK_EXPERIENCE = [
   {
     company: "Anchor Logics",
     url: "https://www.anchorlogics.com/",
-    logoImage: "https://www.google.com/s2/favicons?domain=anchorlogics.com&sz=128",
+    logoImage: `${import.meta.env.BASE_URL}logos/anchor-logics-logo.png`,
     role: "Full Stack Engineering Internship",
     date: "May 2025 - Aug 2025",
     location: "Berkeley, CA, USA",
