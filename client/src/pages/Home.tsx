@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import cityscapeImg from "@assets/image_1768861733754.png";
 
+// Public logos are in client/public/logos/ and served at /logos/ (root path)
+const LOGOS_BASE = "/logos";
+
 // Resume Data
 const WORK_EXPERIENCE = [
   {
@@ -41,7 +44,7 @@ const WORK_EXPERIENCE = [
   {
     company: "Sports Analytics Group @ Berkeley",
     url: "https://sportsanalytics.studentorg.berkeley.edu/projects.html",
-    logoImage: `${import.meta.env.BASE_URL}logos/sagb-logo.png`,
+    logoImage: `${LOGOS_BASE}/sagb-logo.png`,
     role: "Data Scientist",
     date: "Aug 2025 - Dec 2025",
     location: "Berkeley, CA",
@@ -57,7 +60,7 @@ const WORK_EXPERIENCE = [
   {
     company: "Anchor Logics",
     url: "https://www.anchorlogics.com/",
-    logoImage: `${import.meta.env.BASE_URL}logos/anchor-logics-logo.png`,
+    logoImage: `${LOGOS_BASE}/anchor-logics-logo.png`,
     role: "Full Stack Engineering Internship",
     date: "May 2025 - Aug 2025",
     location: "Berkeley, CA, USA",
