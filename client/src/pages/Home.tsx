@@ -123,7 +123,7 @@ const WorkExperienceItem = ({ item }: { item: (typeof WORK_EXPERIENCE)[0] }) => 
     className="mb-10 last:mb-0"
   >
     <div className="flex gap-4">
-      <div className={`shrink-0 w-10 h-10 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-sm overflow-hidden ${logoSrc ? "bg-muted/50 p-0.5" : item.color || "bg-gray-800"}`}>
+      <div className={`shrink-0 w-12 h-12 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-sm overflow-hidden ${logoSrc ? "bg-muted/50 p-0.5" : item.color || "bg-gray-800"}`}>
         {logoSrc ? (
           <img
             src={logoSrc}
@@ -172,7 +172,7 @@ const ListItem = ({ item }: { item: any }) => (
     className="group flex items-center justify-between p-4 mb-2 hover:bg-muted/50 dark:hover:bg-muted/30 rounded-lg cursor-pointer transition-colors border border-transparent hover:border-border"
   >
     <div className="flex items-center gap-4">
-      <div className={`w-10 h-10 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-sm ${item.color || 'bg-gray-800'}`}>
+      <div className={`w-12 h-12 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-sm ${item.color || 'bg-gray-800'}`}>
         {item.logo}
       </div>
       <div>
@@ -263,7 +263,7 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 300 }}
               className="flex gap-4 items-center"
             >
-              <div className="shrink-0 w-10 h-10 rounded-md flex items-center justify-center overflow-hidden bg-muted/50 p-0.5">
+              <div className="shrink-0 w-12 h-12 rounded-md flex items-center justify-center overflow-hidden bg-muted/50 p-0.5">
                 <img
                   src={`${LOGOS_BASE}/ucb-seal.png`}
                   alt="UC Berkeley seal"
