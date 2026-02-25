@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import cityscapeImg from "@assets/image_1768861733754.png";
 
-// Public logos are in client/public/logos/ and served at /logos/ (root path)
-const LOGOS_BASE = "/logos";
+// Public logos are in client/public/logos/
+// Use BASE_URL so it works on GitHub Pages (/Personal-Website/)
+const LOGOS_BASE = `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}logos`;
 
 // Resume Data
 const WORK_EXPERIENCE = [
@@ -264,8 +265,8 @@ export default function Home() {
             >
               <div className="shrink-0 w-10 h-10 rounded-md flex items-center justify-center overflow-hidden bg-muted/50 p-0.5">
                 <img
-                  src="https://www.google.com/s2/favicons?domain=berkeley.edu&sz=128"
-                  alt=""
+                  src={`${LOGOS_BASE}/ucb-seal.png`}
+                  alt="UC Berkeley seal"
                   className="w-full h-full object-contain rounded-[6px]"
                 />
               </div>
