@@ -204,6 +204,7 @@ export default function Home() {
         <header className="flex justify-between items-center mb-24">
           <h1 className="font-bold text-lg tracking-tight">Jerry Chu</h1>
           <nav className="flex items-center gap-6">
+            <a href="#education" className="text-sm font-medium hover:text-primary/70 transition-colors">Education</a>
             <a href="#work" className="text-sm font-medium hover:text-primary/70 transition-colors">Work</a>
             <a href="#projects" className="text-sm font-medium hover:text-primary/70 transition-colors">Projects</a>
             <a href="#activities" className="text-sm font-medium hover:text-primary/70 transition-colors">Activities</a>
@@ -248,6 +249,29 @@ export default function Home() {
 
         {/* Stacked Layout for Content */}
         <div className="flex flex-col gap-24">
+          {/* Education */}
+          <section id="education">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Education</h2>
+            <motion.article
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="flex gap-4 items-center"
+            >
+              <div className="shrink-0 w-10 h-10 rounded-md flex items-center justify-center overflow-hidden bg-muted/50 p-0.5">
+                <img
+                  src="https://www.google.com/s2/favicons?domain=berkeley.edu&sz=128"
+                  alt=""
+                  className="w-full h-full object-contain rounded-[6px]"
+                />
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">Computer Science and Data Science BA @ UC Berkeley</p>
+              </div>
+            </motion.article>
+          </section>
+
           {/* Work Experience */}
           <section id="work">
             <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Work Experience</h2>
