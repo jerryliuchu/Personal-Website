@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import cityscapeImg from "@assets/image_1768861733754.png";
@@ -5,21 +6,70 @@ import cityscapeImg from "@assets/image_1768861733754.png";
 // Resume Data
 const WORK_EXPERIENCE = [
   {
-    company: "Company Name Placeholder",
-    role: "Software Engineer Intern",
-    date: "Summer 2025",
-    logo: "C", // Placeholder letter if no logo
-    color: "bg-blue-600"
+    company: "Ti Lab at Berkeley",
+    url: "https://tilabberkeley.com/research/",
+    logoImage: "https://www.google.com/s2/favicons?domain=tilabberkeley.com&sz=128",
+    role: "Undergraduate Researcher - Computational Biology",
+    date: "Jan 2026 - Present",
+    location: "Berkeley, CA",
+    employmentType: "Part-Time",
+    logo: "T",
+    color: "bg-blue-600",
+    bullets: [
+      "Developed a Python-based algorithmic pipeline to automate the routing of DNA scaffold strands, successfully generating 15+ novel 3D nanostructures with varying geometries (cubes, tetrahedrons) with 78% yield while minimizing thermodynamic instability.",
+      "Simulated folding pathways for DNA origami structures containing over 10,000 nucleotides, achieving a 94% prediction accuracy against experimental atomic force microscopy (AFM) results.",
+      "Designed and rapid-prototyped custom experimental apparatuses (e.g., gel electrophoresis combs, centrifuge adapters) using Fusion 360, reducing lab equipment costs by approximately $3,000 compared to commercial alternatives."
+    ]
   },
   {
-    company: "Another Tech Co",
-    role: "Full Stack Developer",
-    date: "Jan 2024 - Present",
-    logo: "A",
-    color: "bg-emerald-600"
+    company: "BerkeleyTime",
+    url: "http://berkeleytime.com",
+    logoImage: "https://www.google.com/s2/favicons?domain=berkeleytime.com&sz=128",
+    role: "Full Stack Engineer",
+    date: "Aug 2025 - Feb 2026",
+    location: "Berkeley, CA",
+    employmentType: "Part-Time",
+    logo: "B",
+    color: "bg-emerald-600",
+    bullets: [
+      "Contributed to core Berkeleytime platform, a campus-wide course enrollment tool used by 20,000+ students each semester.",
+      "Built and maintained full-stack features using React, TypeScript, Express.js, and MongoDB, refactoring legacy frontend pages and backend APIs into modular, scalable components.",
+      "Enhanced the Scheduler tool with historical grade distributions and enrollment trend visualizations, increasing student adoption by 26% and improving course planning accuracy.",
+      "Optimized performance by implementing caching, restructuring frontend state management, and optimizing database queries, boosting frontend load speed by 26% and reducing backend latency by 41%."
+    ]
   },
-  // Add more as needed based on user's actual resume if they provided it,
-  // but they only provided contact info, so I'll leave placeholders or generic structure.
+  {
+    company: "Sports Analytics Group @ Berkeley",
+    url: "https://sportsanalytics.studentorg.berkeley.edu/projects.html",
+    logoImage: "https://www.google.com/s2/favicons?domain=sportsanalytics.studentorg.berkeley.edu&sz=128",
+    role: "Data Scientist",
+    date: "Aug 2025 - Dec 2025",
+    location: "Berkeley, CA",
+    employmentType: "Part-Time",
+    logo: "S",
+    color: "bg-amber-600",
+    bullets: [
+      "Executed a full data pipeline from SwingVision video analysis to structured CSV format via custom Python scripts.",
+      "Conducted EDA and built statistical correlation models on real-time Cal Tennis data to isolate predictive features for successful tennis swings, such as court heatmaps and ball/swing speed, achieving 88% accuracy in classification.",
+      "Developed a Gradient Boosting Classifier to predict the success of international WNBA prospects, achieving an F1-score of 0.82, validating the model with 5-fold cross-validation to directly inform draft decisions for the Minnesota Lynx WNBA team."
+    ]
+  },
+  {
+    company: "Anchor Logics",
+    url: "https://www.anchorlogics.com/",
+    logoImage: "https://www.google.com/s2/favicons?domain=anchorlogics.com&sz=128",
+    role: "Full Stack Engineering Internship",
+    date: "May 2025 - Aug 2025",
+    location: "Berkeley, CA, USA",
+    employmentType: "Internship",
+    logo: "A",
+    color: "bg-purple-600",
+    bullets: [
+      "Developed a patient-facing Single-page Application (React/Redux on Node.js) for 300+ patients to securely access and visualize personalized medical wearable data; achieved 25% reduction in data retrieval requests.",
+      "Engineered a high-conversion demo request page using TypeScript and Next.js, using form validation, API endpoint design, and integration with a CRM system (Salesforce) to streamline the sales pipeline.",
+      "Operationalized the OpenPose ML model for real-time gait detection using a full-stack AWS architecture (S3) to determine optimal stimuli weight placements for PIEZO2, the company's medical wearable vest product."
+    ]
+  }
 ];
 
 const PROJECTS = [
@@ -57,6 +107,56 @@ const ACTIVITIES = [
     color: "bg-indigo-600"
   }
 ];
+
+const WorkExperienceItem = ({ item }: { item: (typeof WORK_EXPERIENCE)[0] }) => {
+  const [logoSrc, setLogoSrc] = React.useState<string | null>(item.logoImage ?? null);
+  return (
+  <motion.article
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 300 }}
+    className="mb-10 last:mb-0"
+  >
+    <div className="flex gap-4">
+      <div className={`shrink-0 w-10 h-10 rounded-md flex items-center justify-center text-white font-bold text-sm shadow-sm overflow-hidden ${logoSrc ? "bg-muted/50 p-0.5" : item.color || "bg-gray-800"}`}>
+        {logoSrc ? (
+          <img
+            src={logoSrc}
+            alt=""
+            className="w-full h-full object-contain rounded-[6px]"
+            onError={() => setLogoSrc(null)}
+          />
+        ) : (
+          item.logo
+        )}
+      </div>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-semibold text-foreground">{item.role}</h3>
+        <p className="text-foreground/90 font-medium">
+          {item.url ? (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary underline underline-offset-2 transition-colors">
+              {item.company}
+            </a>
+          ) : (
+            item.company
+          )}
+        </p>
+        <p className="text-sm text-muted-foreground mt-1">
+          {[item.location, item.date, item.employmentType].filter(Boolean).join(" · ")}
+        </p>
+        {item.bullets && item.bullets.length > 0 && (
+          <ul className="mt-4 space-y-2 list-disc list-inside text-sm text-muted-foreground">
+            {item.bullets.map((bullet, i) => (
+              <li key={i} className="leading-relaxed">{bullet}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </motion.article>
+  );
+};
 
 const ListItem = ({ item }: { item: any }) => (
   <motion.div 
@@ -153,7 +253,7 @@ export default function Home() {
             <h2 className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-8">Work Experience</h2>
             <div className="flex flex-col">
               {WORK_EXPERIENCE.map((item, index) => (
-                <ListItem key={index} item={item} />
+                <WorkExperienceItem key={index} item={item} />
               ))}
             </div>
           </section>
