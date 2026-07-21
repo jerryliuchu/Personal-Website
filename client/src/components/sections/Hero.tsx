@@ -72,8 +72,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-8 max-w-xl text-lg text-muted-foreground md:text-xl"
         >
-          {PROFILE.role} at UC Berkeley — building agentic AI tooling and full-stack
-          platforms at SLB, plus computational-biology research, and course tools used by 20,000+ students.
+          {PROFILE.role} at UC Berkeley.
+          <br />
+          Currently interning @ SLB. Previous @ Anchor Logics.
         </motion.p>
 
         <motion.div
