@@ -28,12 +28,14 @@ export const PROFILE = {
   bio: "I'm a Data Science & Computer Science student at UC Berkeley who loves building at the intersection of engineering and data — from agentic AI tooling and full-stack platforms to computational-biology research. I care about shipping polished, high-impact software.",
   // Shown in the About section — edit freely.
   interests: [
-    "Agentic AI & LLM tooling",
-    "Full-stack web",
-    "Machine learning",
-    "Computational biology",
-    "Sports analytics",
-    "Hackathons",
+    "Agentic AI & LLMs",
+    "Full-Stack Development",
+    "Machine Learning",
+    "Cloud & Distributed Systems",
+    "System Design",
+    "Data Engineering",
+    "Developer Tooling",
+    "Open Source",
   ],
   // Headline metrics for the animated stat row. `decimals` is optional.
   stats: [
